@@ -54,11 +54,11 @@ basic.forever(function () {
     xy = (x >> 2) + (y << 6)
     let xx = xy & 255
     let yy = (xy & 0xff00) >> 8
-    serial.writeValue("x", x)
-    serial.writeValue("xx", xx)
-    serial.writeValue("y", y)
-    serial.writeValue("yy", yy)
-    serial.writeValue("xy", xy)
+    // serial.writeValue("x", x)
+    // serial.writeValue("xx", xx)
+    // serial.writeValue("y", y)
+    // serial.writeValue("yy", yy)
+    // serial.writeValue("xy", xy)
     radio.sendValue("buttons", buttons)
     radio.sendValue("xy", xy)
     basic.pause(10)
