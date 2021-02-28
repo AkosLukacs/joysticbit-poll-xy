@@ -51,14 +51,7 @@ basic.forever(function () {
     serial.writeValue("buttons", buttons)
     x = pins.analogReadPin(AnalogPin.P0)
     y = pins.analogReadPin(AnalogPin.P1)
-    xy = (x >> 2) + (y << 6)
-    let xx = xy & 255
-    let yy = (xy & 0xff00) >> 8
-    // serial.writeValue("x", x)
-    // serial.writeValue("xx", xx)
-    // serial.writeValue("y", y)
-    // serial.writeValue("yy", yy)
-    // serial.writeValue("xy", xy)
+    xy = x + y * 1024
     radio.sendValue("buttons", buttons)
     radio.sendValue("xy", xy)
     basic.pause(10)
