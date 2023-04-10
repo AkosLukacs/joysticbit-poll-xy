@@ -1,3 +1,9 @@
+input.onButtonPressed(Button.A, function () {
+    radio.setGroup(42)
+})
+input.onButtonPressed(Button.B, function () {
+    radio.setGroup(43)
+})
 let xy = 0
 let y = 0
 let x = 0
